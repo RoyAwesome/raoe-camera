@@ -42,6 +42,6 @@ This project is open source and permissively licensed, under either MIT or Apach
 
 This dual licensing approach provides a few benefits:
 
-    * Apache 2.0 provides protection from patent trolling, and reduces license boilerplate
-    * MIT is compatible with many other open source licenses
-    * Both licenses have various ecosystems to support them
+* Apache 2.0 provides protection from patent trolling, and reduces license boilerplate
+* MIT is compatible with many other open source licenses
+* Both licenses have various ecosystems to support them
