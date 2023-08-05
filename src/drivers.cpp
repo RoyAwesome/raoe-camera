@@ -23,6 +23,18 @@ Copyright 2022-2023 Roy Awesome's Open Engine (RAOE)
 
 namespace raoe::camera
 {
+    void controller::update(double delta_time)
+    {
+        transform transform;
+        for(auto& driver : m_drivers)
+        {
+            transform = driver->update(delta_time, transform);
+        }
+
+        m_view_matrix = glm::lookAt(transform.position, transform.position + transform.forward(),
+                                    glm::vec3(0.0f, 1.0f, 0.0f)); // TODO: Make this up vector configurable
+    }
+
     std::string arm::describe() const
     {
         return std::format("arm({})", m_offset);
