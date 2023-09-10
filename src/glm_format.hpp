@@ -24,13 +24,13 @@ Copyright 2022-2023 Roy Awesome's Open Engine (RAOE)
     struct ns::formatter<type>                                                                                         \
     {                                                                                                                  \
         template <typename ParseContext>                                                                               \
-        constexpr auto parse(ParseContext& ctx)                                                                        \
+        constexpr auto parse(ParseContext& ctx) const                                                                  \
         {                                                                                                              \
             return ctx.begin();                                                                                        \
         }                                                                                                              \
                                                                                                                        \
         template <typename FormatContext>                                                                              \
-        auto format(const type& value, FormatContext& ctx)                                                             \
+        auto format(const type& value, FormatContext& ctx) const                                                       \
         {                                                                                                              \
             return format_to(ctx.out(), __VA_ARGS__);                                                                  \
         }                                                                                                              \
